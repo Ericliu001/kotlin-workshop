@@ -1,5 +1,7 @@
 package org.jetbrains.kotlinworkshop.student.introduction._2Shop
 
+import java.util.function.Predicate
+
 fun main(args: Array<String>) {
     val list = listOf(-1, 3, 0, -5, 7)
 
@@ -20,12 +22,13 @@ fun main(args: Array<String>) {
 
 // Return true if the customer is from the given city
 fun Customer.isFrom(city: City): Boolean {
-    return this.city.equals(city)
+    return this.city == city
 }
 
 // Return true if all customers are from the given city
 fun Shop.checkAllCustomersAreFrom(city: City): Boolean {
-    return this.customers.all { it.isFrom(city) }
+    val predicate : (Customer) -> Boolean =  { customer -> customer.city == city }
+    return this.customers.all(predicate)
 }
 
 // Return true if there is at least one customer from the given city
