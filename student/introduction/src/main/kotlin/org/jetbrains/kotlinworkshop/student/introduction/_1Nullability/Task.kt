@@ -11,5 +11,6 @@ interface Mailer {
 Rewrite Java method 'MessageUtil.sendMessageToClient' in Kotlin in 2-3 lines.
 */
 fun sendMessageToClient(client: Client?, message: String?, mailer: Mailer) {
-    TODO()
+    val email = client?.personalInfo?.email
+    if (email == null || message == null) return else mailer.sendMessage(email, message)
 }
