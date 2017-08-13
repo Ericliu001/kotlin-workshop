@@ -1,3 +1,4 @@
+*.jar
 *.iws
 .ds_store
 out/
