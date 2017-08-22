@@ -1,4 +1,4 @@
-package org.jetbrains.kotlinworkshop.advanced._3InlineFunctions
+ package org.jetbrains.kotlinworkshop.advanced._3InlineFunctions
 
 class Board(val width: Int) {
     val indices1: List<Pair<Int, Int>>

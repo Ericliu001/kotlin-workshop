@@ -15,3 +15,13 @@ fun test() {
 
 // Infix
 infix fun String.isEqual(value: String) = this == value
+
+
+interface Student {
+    fun getName(): String
+}
+
+
+fun Student.getLongName(): String {
+    return "Eric " + "Liu"
+}

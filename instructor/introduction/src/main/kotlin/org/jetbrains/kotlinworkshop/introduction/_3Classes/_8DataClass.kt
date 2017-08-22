@@ -9,6 +9,13 @@ data class Person(
 fun main(args: Array<String>) {
     val person1 = Person("Alice", 21)
     val person2 = Person("Alice", 21)
+
+    val (name, age) = person2.copy(name = "Eric")
+    val copyPerson1 = person1.copy(name = "Paul")
+
+
+
+
     println(person1)
     println(person1 == person2)
 }
